@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Paleta e aplicações da brand PescaLog</title>
+  <desc id="desc">Paleta principal e comparação da brand completa e compacta em temas claro e escuro.</desc>
+  <defs>
+    <symbol id="brand-emblem" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="44" fill="#fffdf9" stroke="#071f2b" stroke-width="7"/>
+      <path d="M27 36c9 0 16 3 23 9 7-6 14-9 23-9v33c-9 0-16 3-23 9-7-6-14-9-23-9z" fill="none" stroke="#071f2b" stroke-width="5.5" stroke-linejoin="round"/>
+      <path d="M50 45v33" fill="none" stroke="#071f2b" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M31 56c5-4 11-4 17 0s12 4 18 0" fill="none" stroke="#1f8a85" stroke-width="5" stroke-linecap="round"/>
+      <path d="M32 66c5-3 10-3 15 0s11 3 17 0" fill="none" stroke="#d9b35d" stroke-width="4.5" stroke-linecap="round"/>
+    </symbol>
+    <style>
+      .title{font:700 34px 'Segoe UI',sans-serif;fill:#071f2b}.label{font:600 18px 'Segoe UI',sans-serif}.meta{font:400 14px 'Segoe UI',sans-serif}.word{font:600 31px 'Segoe UI',sans-serif;letter-spacing:-1.5px}.log{fill:#d9b35d;font-weight:700}.light{fill:#071f2b}.dark{fill:#f7fbfa}
+    </style>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="#f3f6f4"/>
+  <text x="55" y="62" class="title">PescaLog — paleta e brand</text>
+
+  <g transform="translate(55 100)">
+    <g><rect width="170" height="96" rx="14" fill="#071f2b"/><text x="14" y="122" class="label light">Azul-marinho</text><text x="14" y="145" class="meta light">#071F2B</text></g>
+    <g transform="translate(190)"><rect width="170" height="96" rx="14" fill="#1f8a85"/><text x="14" y="122" class="label light">Verde-mar</text><text x="14" y="145" class="meta light">#1F8A85</text></g>
+    <g transform="translate(380)"><rect width="170" height="96" rx="14" fill="#d9b35d"/><text x="14" y="122" class="label light">Dourado</text><text x="14" y="145" class="meta light">#D9B35D</text></g>
+    <g transform="translate(570)"><rect width="170" height="96" rx="14" fill="#fffdf9" stroke="#dbe4e1"/><text x="14" y="122" class="label light">Papel</text><text x="14" y="145" class="meta light">#FFFDF9</text></g>
+  </g>
+
+  <g transform="translate(55 300)">
+    <rect width="525" height="170" rx="22" fill="#fffdf9" stroke="#dbe4e1"/>
+    <text x="24" y="32" class="meta light">DESKTOP · LIGHT</text>
+    <use x="28" y="52" width="92" height="92" href="#brand-emblem"/>
+    <text x="138" y="112" class="word light">pesca<tspan class="log">Log</tspan></text>
+  </g>
+  <g transform="translate(620 300)">
+    <rect width="525" height="170" rx="22" fill="#071f2b"/>
+    <text x="24" y="32" class="meta dark">DESKTOP · DARK</text>
+    <circle cx="74" cy="98" r="52" fill="#fffdf9"/>
+    <use x="28" y="52" width="92" height="92" href="#brand-emblem"/>
+    <text x="138" y="112" class="word dark">pesca<tspan class="log">Log</tspan></text>
+  </g>
+
+  <g transform="translate(55 510)">
+    <rect width="525" height="170" rx="22" fill="#fffdf9" stroke="#dbe4e1"/>
+    <text x="24" y="32" class="meta light">MÓVEL · LIGHT</text>
+    <use x="214" y="48" width="96" height="96" href="#brand-emblem"/>
+  </g>
+  <g transform="translate(620 510)">
+    <rect width="525" height="170" rx="22" fill="#071f2b"/>
+    <text x="24" y="32" class="meta dark">MÓVEL · DARK</text>
+    <circle cx="262" cy="96" r="54" fill="#fffdf9"/>
+    <use x="214" y="48" width="96" height="96" href="#brand-emblem"/>
+  </g>
+</svg>

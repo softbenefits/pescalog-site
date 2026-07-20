@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PescaLog — Protótipo visual</title>
+  <link rel="stylesheet" href="styles.css?v=20260720-responsive">
+</head>
+<body>
+  <div class="prototype-switcher" aria-label="Navegação do protótipo">
+    <span>Protótipo</span>
+    <button class="is-active" data-view="public">Página pública</button>
+    <button data-view="auth">Acesso</button>
+    <button data-view="dashboard">Dashboard</button>
+    <button data-view="journey">Jornada</button>
+    <button data-view="history">Histórico</button>
+    <button data-view="detail">Detalhe</button>
+    <button data-view="admin">Backoffice</button>
+  </div>
+
+  <main id="public" class="prototype-view is-active">
+    <header class="public-header content-width">
+      <a class="brand brand-dark" href="#" aria-label="PescaLog, início">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span>pesca<strong>Log</strong></span>
+      </a>
+      <nav aria-label="Navegação pública">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#vantagens">O que vais descobrir</a>
+        <a class="text-action" href="#entrar">Entrar <span>↗</span></a>
+      </nav>
+    </header>
+
+    <section class="hero content-width">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> O teu diário de pesca</p>
+        <h1>Cada jornada conta uma <em>história.</em></h1>
+        <p class="hero-lead">Regista o dia, guarda as capturas e descobre os padrões que tornam a tua pesca verdadeiramente tua.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#entrar">Entrar no PescaLog <span>→</span></a>
+          <a class="button button-quiet" href="#como-funciona">Ver como funciona</a>
+        </div>
+        <div class="trust-line">
+          <span class="trust-icon">✓</span>
+          <span>Os teus dados são privados e visíveis apenas por ti.</span>
+        </div>
+      </div>
+
+      <div class="hero-visual hero-fishing" aria-label="Pescador numa embarcação no mar, ao amanhecer">
+        <img class="hero-fishing-image" src="assets/hero-pescador.png" alt="Pescador numa pequena embarcação junto à costa, com cana de pesca">
+        <div class="hero-fishing-caption"><span>O mar ensina a esperar.</span><small>O PescaLog ajuda-te a recordar.</small></div>
+      </div>
+    </section>
+
+    <section id="entrar" class="auth-band">
+      <div class="content-width auth-layout">
+        <div class="auth-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> A tua memória no mar</p>
+          <h2>Volta às tuas jornadas.<br>Encontra o próximo padrão.</h2>
+          <p>O acesso ao PescaLog é reservado a utilizadores convidados.</p>
+        </div>
+        <form class="auth-card" onsubmit="return false">
+          <div class="auth-card-head">
+            <span class="auth-mark">⌁</span>
+            <div><h3>Bem-vindo de volta</h3><p>Introduz o teu email para continuar.</p></div>
+          </div>
+          <label for="email">Email</label>
+          <input id="email" type="email" value="pescador@exemplo.pt">
+          <label for="password">Palavra-passe</label>
+          <div class="password-field"><input id="password" type="password" value="password"><button aria-label="Mostrar palavra-passe">◉</button></div>
+          <div class="form-meta"><label class="check"><input type="checkbox" checked> Manter sessão iniciada</label><a href="#">Esqueci-me</a></div>
+          <button class="button button-primary button-full" data-go="dashboard">Entrar <span>→</span></button>
+          <div class="separator"><span>ou</span></div>
+          <button class="button button-outline button-full">Receber ligação por email</button>
+          <p class="invitation-note"><span>i</span> Ainda não tens acesso? O registo é feito através de convite.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="story content-width">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Simples por natureza</p>
+      <h2>Do mar à memória, sem complicações.</h2>
+      <div class="story-grid">
+        <article><span>01</span><div class="story-icon">⌖</div><h3>Regista a jornada</h3><p>Data, local, tipo de pesca e aquilo que realmente importa naquele dia.</p></article>
+        <article><span>02</span><div class="story-icon">≋</div><h3>Adiciona capturas</h3><p>Regista apenas quando existem. Uma jornada sem capturas continua a ter valor.</p></article>
+        <article><span>03</span><div class="story-icon">↗</div><h3>Descobre padrões</h3><p>Compara espécies, peso e fases da lua ao longo do teu histórico.</p></article>
+      </div>
+    </section>
+
+    <footer class="public-footer">
+      <div class="content-width"><a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a><p>A tua pesca. A tua história.</p><span>© 2026 PescaLog</span></div>
+    </footer>
+  </main>
+
+  <main id="auth" class="prototype-view auth-page">
+    <header class="auth-page-header content-width">
+      <a class="brand brand-dark" href="#" data-go="public"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <button class="text-back" data-go="public">← Voltar ao PescaLog</button>
+    </header>
+    <section class="auth-page-shell content-width">
+      <aside class="auth-story">
+        <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Diário de pesca pessoal</p>
+        <h1>Regista o mar.<br><em>Guarda as histórias.</em></h1>
+        <p>Entra para registar as Jornadas, as Capturas e os detalhes que tornam cada saída diferente.</p>
+        <div class="auth-story-sea" aria-hidden="true"><i></i><b></b><span>⌁</span></div>
+        <div class="auth-story-points"><div><span>✓</span><p><strong>Acesso por convite</strong><br>Não existe registo público.</p></div><div><span>✓</span><p><strong>O teu caderno de bordo</strong><br>Cada pescador vê apenas as suas Jornadas.</p></div></div>
+      </aside>
+      <section class="access-panel">
+        <div class="access-state is-active" data-auth-state="login">
+          <div class="access-heading"><span class="access-icon access-anchor">⌁</span><div><h2>Entrar no PescaLog</h2><p>Usa o email associado ao teu convite.</p></div></div>
+          <label class="field"><span>Email</span><input type="email" value="pescador@exemplo.pt"></label>
+          <label class="field"><span>Palavra-passe</span><div class="password-field"><input type="password" value="password"><button>◉</button></div></label>
+          <div class="access-meta"><label class="check"><input type="checkbox" checked> Manter sessão iniciada</label><button data-auth-target="magic">Entrar por email</button></div>
+          <button class="button button-primary button-full" data-go="dashboard">Entrar <span>→</span></button>
+          <div class="access-separator"><span>ou</span></div>
+          <button class="button button-outline button-full" data-auth-target="magic">Receber Magic Link</button>
+          <p class="access-help">Ainda não tens acesso? O administrador deve enviar-te um convite.</p>
+        </div>
+
+        <div class="access-state" data-auth-state="magic">
+          <button class="back-in-panel" data-auth-target="login">← Voltar a entrar</button>
+          <div class="access-heading"><span class="access-icon sparkle">✦</span><div><h2>Entrar por email</h2><p>Enviamos uma ligação temporária para entrares sem palavra-passe.</p></div></div>
+          <label class="field"><span>O teu email</span><input type="email" value="pescador@exemplo.pt"></label>
+          <button class="button button-primary button-full" data-auth-target="sent">Enviar Magic Link <span>→</span></button>
+          <p class="access-help neutral"><span>i</span> Por segurança, mostramos a mesma mensagem mesmo que o email não esteja associado a uma conta.</p>
+        </div>
+
+        <div class="access-state access-centered" data-auth-state="sent">
+          <div class="email-illustration"><span>✉</span><i>✦</i></div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Verifica o teu email</p>
+          <h2>Enviámos uma ligação de acesso.</h2>
+          <p>Se existir uma conta associada a <strong>pescador@exemplo.pt</strong>, receberás uma mensagem dentro de alguns instantes.</p>
+          <div class="email-tip"><span>1</span><p>Abre o email do PescaLog.</p><span>2</span><p>Clica em <strong>Entrar no PescaLog</strong>.</p></div>
+          <button class="button button-outline button-full" data-auth-target="magic">Reenviar ligação</button>
+          <button class="text-button" data-auth-target="login">Voltar ao início de sessão</button>
+        </div>
+
+        <div class="access-state access-centered" data-auth-state="invite">
+          <div class="email-illustration invite-illustration"><span>⌁</span><i>+</i></div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Convite PescaLog</p>
+          <h2>O teu acesso está pronto.</h2>
+          <p>Foste convidado para guardar as tuas Jornadas de Pesca. Confirma o teu nome e escolhe uma palavra-passe para concluir o registo.</p>
+          <label class="field text-left"><span>Primeiro nome</span><input value="Nuno"></label>
+          <label class="field text-left"><span>Último nome</span><input value="Gonçalves"></label>
+          <label class="field text-left"><span>Palavra-passe</span><input type="password" placeholder="Cria uma palavra-passe segura"></label>
+          <button class="button button-primary button-full" data-go="dashboard">Concluir e entrar <span>→</span></button>
+          <p class="access-help neutral"><span>i</span> Este convite é pessoal e tem validade limitada.</p>
+        </div>
+
+        <div class="access-state access-centered" data-auth-state="expired">
+          <div class="email-illustration expired-illustration"><span>⌁</span><i>!</i></div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Ligação indisponível</p>
+          <h2>Esta ligação já não é válida.</h2>
+          <p>Pode ter expirado, sido utilizada ou deixado de estar disponível. Pede uma nova ligação para continuar.</p>
+          <button class="button button-primary button-full" data-auth-target="magic">Pedir nova ligação <span>→</span></button>
+          <button class="text-button" data-auth-target="login">Voltar ao início de sessão</button>
+        </div>
+      </section>
+    </section>
+    <div class="auth-state-switcher"><span>Estados do protótipo:</span><button class="is-active" data-auth-target="login">Login</button><button data-auth-target="magic">Magic Link</button><button data-auth-target="sent">Email enviado</button><button data-auth-target="invite">Convite</button><button data-auth-target="expired">Expirado</button></div>
+  </main>
+
+  <main id="dashboard" class="prototype-view app-frame">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
+      <nav class="side-nav">
+        <a class="is-active" href="#"><span>⌂</span> Dashboard</a>
+        <a href="#"><span>◌</span> Jornadas <b>24</b></a>
+        <a href="#"><span>⌖</span> Locais</a>
+        <a href="#"><span>◐</span> Estatísticas</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a href="#"><span>⚙</span> Definições</a><a href="#"><span>?</span> Ajuda</a>
+        <div class="version">PescaLog · v1.0</div>
+      </div>
+    </aside>
+    <section class="app-main">
+      <header class="topbar">
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <div class="topbar-crumb"><span>Espaço pessoal</span><b>/</b><strong>Dashboard</strong></div>
+        <div class="topbar-actions"><button aria-label="Notificações">♢<i></i></button><div class="avatar">NG</div><div class="user-name"><strong>Nuno Gonçalves</strong><span>Pescador</span></div><button>⌄</button></div>
+      </header>
+      <div class="app-content">
+        <div class="page-heading">
+          <div><p class="eyebrow"><span class="eyebrow-dot"></span> Domingo, 19 de julho</p><h1>Bom dia, Nuno.</h1><p>Aqui está o resumo das tuas jornadas.</p></div>
+          <button class="button button-primary">＋ Nova jornada</button>
+        </div>
+        <div class="period-bar"><div><button class="is-active">Este ano</button><button>Últimos 12 meses</button><button>Todo o histórico</button></div><span>Atualizado agora</span></div>
+        <section class="metric-grid">
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon">≋</span><span class="trend positive">↗ 18%</span></div><small>PESO TOTAL</small><strong>86,7 <em>kg</em></strong><p>em 24 jornadas</p></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon">◉</span><span class="trend">12 espécies</span></div><small>MAIS CAPTURADA</small><strong>Choco</strong><p>42 exemplares registados</p></article>
+          <article class="metric-card lunar-metric"><div class="metric-top"><span class="metric-icon phase-icon-dashboard">↗</span><span class="trend positive">melhor fase</span></div><small>FASE DA LUA</small><strong>Quarto crescente</strong><p>31% das tuas capturas</p></article>
+        </section>
+        <section class="dashboard-grid">
+          <article class="panel chart-panel"><div class="panel-head"><div><small>EVOLUÇÃO</small><h2>Peso por jornada</h2></div><button>Ver histórico →</button></div><div class="chart"><div class="chart-scale"><span>15 kg</span><span>10 kg</span><span>5 kg</span><span>0 kg</span></div><svg viewBox="0 0 600 190" preserveAspectRatio="none" aria-label="Gráfico de peso por jornada"><defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f8a85" stop-opacity=".28"/><stop offset="1" stop-color="#1f8a85" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0,155 C55,145 68,92 122,108 S204,125 252,70 S336,142 390,104 S475,84 520,45 S565,78 600,34 L600,190 L0,190 Z"/><path class="chart-line" d="M0,155 C55,145 68,92 122,108 S204,125 252,70 S336,142 390,104 S475,84 520,45 S565,78 600,34"/></svg><div class="chart-labels"><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span></div></div></article>
+          <article class="panel recent-panel"><div class="panel-head"><div><small>ATIVIDADE RECENTE</small><h2>Últimas jornadas</h2></div><button>Ver todas →</button></div><div class="journey-list"><a href="#"><time><strong>18</strong>JUL</time><div><strong>Sesimbra</strong><span>Choco e lula · 3 espécies</span></div><b>12,4 kg</b><i>→</i></a><a href="#"><time><strong>05</strong>JUL</time><div><strong>Fonte da Telha</strong><span>Diversos · 2 espécies</span></div><b>7,8 kg</b><i>→</i></a><a href="#"><time><strong>21</strong>JUN</time><div><strong>Setúbal</strong><span>Polvo · sem capturas</span></div><b>—</b><i>→</i></a></div></article>
+        </section>
+      </div>
+      <footer class="app-footer"><span>© 2026 PescaLog</span><nav><a href="#">Privacidade</a><a href="#">Ajuda</a></nav><span class="status"><i></i> Todos os sistemas operacionais</span></footer>
+    </section>
+  </main>
+
+  <main id="journey" class="prototype-view app-frame">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
+      <nav class="side-nav">
+        <a href="#" data-go="dashboard"><span>⌂</span> Dashboard</a>
+        <a class="is-active" href="#"><span>◌</span> Jornadas <b>24</b></a>
+        <a href="#"><span>⌖</span> Locais</a>
+        <a href="#"><span>◐</span> Estatísticas</a>
+      </nav>
+      <div class="sidebar-bottom"><a href="#"><span>⚙</span> Definições</a><a href="#"><span>?</span> Ajuda</a><div class="version">PescaLog · v1.0</div></div>
+    </aside>
+    <section class="app-main">
+      <header class="topbar">
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <div class="topbar-crumb"><span>Jornadas</span><b>/</b><strong>Nova Jornada</strong></div>
+        <div class="topbar-actions"><div class="draft-state"><i></i> Alterações por guardar</div><div class="avatar">NG</div><div class="user-name"><strong>Nuno Gonçalves</strong><span>Pescador</span></div><button>⌄</button></div>
+      </header>
+
+      <form class="app-content journey-page" onsubmit="return false">
+        <div class="page-heading journey-heading">
+          <div><p class="eyebrow"><span class="eyebrow-dot"></span> Diário de pesca</p><h1>Nova Jornada</h1><p>Regista o dia ao teu ritmo. Podes guardar sem adicionar capturas.</p></div>
+          <div class="journey-actions"><button class="button button-quiet" data-go="dashboard">Cancelar</button><button class="button button-primary save-journey">Guardar Jornada <span>→</span></button></div>
+        </div>
+
+        <div class="journey-layout">
+          <div class="journey-main-column">
+            <section class="form-panel panel">
+              <div class="section-heading"><div class="section-number">01</div><div><small>DADOS DA JORNADA</small><h2>Onde e como pescaste?</h2></div><span>Campos obrigatórios <b>*</b></span></div>
+              <div class="journey-form-grid">
+                <label class="field"><span>Data <b>*</b></span><div class="input-with-icon"><i>□</i><input type="date" value="2026-07-19"></div></label>
+                <label class="field"><span>Local <b>*</b></span><div class="compound-field"><select><option>Sesimbra</option><option>Fonte da Telha</option><option>Setúbal</option></select><button type="button" class="new-location">＋ Novo</button></div></label>
+                <label class="field"><span>Tipo de pesca <b>*</b></span><select id="fishing-type"><option>Choco e lula</option><option>Diversos</option><option>Polvo</option></select><small>Usado para ordenar as espécies sugeridas.</small></label>
+                <label class="field"><span>Fase da Lua</span><div class="moon-select"><i class="phase-icon"></i><select><option>Quarto crescente</option><option>Lua cheia</option><option>Quarto minguante</option><option>Lua nova</option></select></div><small><i class="auto-dot"></i> Sugerida automaticamente para esta data. <button type="button">Alterar</button></small></label>
+                <label class="field"><span>Peso Total</span><div class="unit-input"><input type="number" step="0.01" placeholder="0,00"><strong>kg</strong></div><small>Peso total de toda a Jornada.</small></label>
+                <label class="field field-wide"><span>Observações Gerais</span><textarea rows="3" placeholder="Estado do mar, corrente, condições ou notas sobre o dia…"></textarea><small>Estas observações referem-se ao dia de pesca.</small></label>
+              </div>
+            </section>
+
+            <section class="captures-section">
+              <div class="captures-heading"><div><div class="section-number">02</div><div><small>CAPTURAS</small><h2>O que capturaste?</h2></div></div><button type="button" class="button button-outline add-capture">＋ Adicionar captura</button></div>
+              <div class="capture-empty">
+                <div class="empty-water"><i></i><b></b><strong>⌁</strong></div>
+                <h3>Ainda não adicionaste capturas</h3>
+                <p>Nem todos os dias trazem peixe. Esta Jornada pode ser guardada assim.</p>
+                <button type="button" class="text-button add-capture">＋ Adicionar a primeira captura</button>
+              </div>
+              <div class="capture-list" aria-live="polite"></div>
+            </section>
+          </div>
+
+          <aside class="journey-summary-column">
+            <section class="journey-context-card">
+              <span class="context-wave">⌁</span>
+              <small>CONTEXTO DA JORNADA</small><h3>Preparado para registar</h3><p>19 de julho de 2026 · Sesimbra</p>
+              <div class="journey-context-note"><span>i</span><p>A Fase da Lua foi sugerida pela data e pode ser alterada no formulário.</p></div>
+            </section>
+            <section class="journey-checklist panel">
+              <small>RESUMO DA JORNADA</small>
+              <ul><li class="done"><span>✓</span><div><strong>Data</strong><small>19 jul 2026</small></div></li><li class="done"><span>✓</span><div><strong>Local</strong><small>Sesimbra</small></div></li><li class="done"><span>✓</span><div><strong>Tipo de pesca</strong><small>Choco e lula</small></div></li><li><span>○</span><div><strong>Capturas</strong><small>Opcional</small></div></li></ul>
+            </section>
+            <div class="keyboard-hint"><span>⌘</span><p><strong>Guardar rapidamente</strong><br>Ctrl + Enter</p></div>
+          </aside>
+        </div>
+        <div class="mobile-save-bar"><button class="button button-primary save-journey">Guardar Jornada <span>→</span></button></div>
+      </form>
+      <footer class="app-footer"><span>© 2026 PescaLog</span><nav><a href="#">Privacidade</a><a href="#">Ajuda</a></nav><span class="status"><i></i> Jornada ainda não gravada</span></footer>
+    </section>
+
+    <div class="location-drawer" aria-hidden="true">
+      <button type="button" class="drawer-backdrop close-location" aria-label="Fechar"></button>
+      <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="location-title">
+        <div class="drawer-head"><div><small>NOVO LOCAL</small><h2 id="location-title">Guarda um local de pesca</h2></div><button type="button" class="close-location">×</button></div>
+        <p>O local ficará disponível apenas na tua conta.</p>
+        <label class="field"><span>Nome do local <b>*</b></span><input type="text" placeholder="Ex.: Cabo Espichel"></label>
+        <label class="field"><span>Notas</span><textarea rows="3" placeholder="Ponto de referência ou indicação útil…"></textarea></label>
+        <div class="drawer-actions"><button type="button" class="button button-quiet close-location">Cancelar</button><button type="button" class="button button-primary close-location">Guardar local</button></div>
+      </section>
+    </div>
+
+    <div class="save-toast" role="status"><span>✓</span><div><strong>Jornada guardada</strong><p>O registo ficou disponível no teu histórico.</p></div></div>
+  </main>
+
+  <main id="history" class="prototype-view app-frame">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
+      <nav class="side-nav"><a href="#" data-go="dashboard"><span>⌂</span> Dashboard</a><a class="is-active" href="#"><span>◌</span> Jornadas <b>24</b></a><a href="#"><span>⌖</span> Locais</a><a href="#"><span>◐</span> Estatísticas</a></nav>
+      <div class="sidebar-bottom"><a href="#"><span>⚙</span> Definições</a><a href="#"><span>?</span> Ajuda</a><div class="version">PescaLog · v1.0</div></div>
+    </aside>
+    <section class="app-main">
+      <header class="topbar"><button class="menu-toggle">☰</button><div class="topbar-crumb"><span>Jornadas</span><b>/</b><strong>Histórico</strong></div><div class="topbar-actions"><div class="avatar">NG</div><div class="user-name"><strong>Nuno Gonçalves</strong><span>Pescador</span></div><button>⌄</button></div></header>
+      <div class="app-content history-page">
+        <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> A tua memória</p><h1>Histórico de Jornadas</h1><p>Pesquisa e revisita todos os teus dias de pesca.</p></div><button class="button button-primary" data-go="journey">＋ Nova Jornada</button></div>
+        <section class="history-overview">
+          <div><small>JORNADAS ENCONTRADAS</small><strong>24</strong><span>desde fevereiro de 2026</span></div>
+          <div><small>PESO TOTAL</small><strong>86,7 <em>kg</em></strong><span>no período selecionado</span></div>
+          <div class="history-moon"><b>↗</b><p><small>MELHOR FASE</small><strong>Quarto crescente</strong><span>31% das capturas</span></p></div>
+        </section>
+        <section class="history-filters panel">
+          <div class="search history-search"><span>⌕</span><input placeholder="Pesquisar por local, espécie ou observação…"></div>
+          <label><span>Período</span><select><option>Todo o histórico</option><option>Este ano</option><option>Últimos 12 meses</option></select></label>
+          <label><span>Tipo de pesca</span><select><option>Todos</option><option>Choco e lula</option><option>Diversos</option><option>Polvo</option></select></label>
+          <button class="filter-button">⚙ Mais filtros</button>
+        </section>
+        <div class="history-result-bar"><span>24 jornadas</span><div><span>Ordenar por</span><select><option>Mais recentes</option><option>Mais antigas</option><option>Maior peso</option></select><button class="view-toggle is-active">☷</button><button class="view-toggle">▦</button></div></div>
+        <section class="history-list">
+          <article class="history-item" data-go="detail"><time><strong>18</strong><span>JUL</span><small>2026</small></time><div class="history-main"><div class="history-title"><h2>Sesimbra</h2><span class="fishing-badge">Choco e lula</span></div><p>Mar calmo durante a manhã, corrente moderada depois das 11h.</p><div class="species-tags"><span>Choco · 5</span><span>Lula · 2</span><span>Polvo · 1</span></div></div><div class="history-lunar"><span>Fase: Quarto crescente</span></div><div class="history-numbers"><strong>12,4 <small>kg</small></strong><span>8 capturas</span></div><button>→</button></article>
+          <article class="history-item" data-go="detail"><time><strong>05</strong><span>JUL</span><small>2026</small></time><div class="history-main"><div class="history-title"><h2>Fonte da Telha</h2><span class="fishing-badge">Diversos</span></div><p>Início de jornada com vento fraco de noroeste.</p><div class="species-tags"><span>Robalo · 2</span><span>Dourada · 3</span></div></div><div class="history-lunar"><span>Fase: Lua cheia</span></div><div class="history-numbers"><strong>7,8 <small>kg</small></strong><span>5 capturas</span></div><button>→</button></article>
+          <article class="history-item no-catches" data-go="detail"><time><strong>21</strong><span>JUN</span><small>2026</small></time><div class="history-main"><div class="history-title"><h2>Setúbal</h2><span class="fishing-badge">Polvo</span></div><p>Dia difícil, água muito mexida e corrente forte.</p><div class="species-tags"><span>Sem capturas</span></div></div><div class="history-lunar"><span>Fase: Lua nova</span></div><div class="history-numbers"><strong>—</strong><span>0 capturas</span></div><button>→</button></article>
+        </section>
+        <nav class="pagination" aria-label="Paginação"><button disabled>←</button><button class="is-active">1</button><button>2</button><button>3</button><span>…</span><button>8</button><button>→</button></nav>
+      </div>
+      <footer class="app-footer"><span>© 2026 PescaLog</span><nav><a href="#">Privacidade</a><a href="#">Ajuda</a></nav><span class="status"><i></i> Todos os sistemas operacionais</span></footer>
+    </section>
+  </main>
+
+  <main id="detail" class="prototype-view app-frame">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
+      <nav class="side-nav"><a href="#" data-go="dashboard"><span>⌂</span> Dashboard</a><a class="is-active" href="#" data-go="history"><span>◌</span> Jornadas <b>24</b></a><a href="#"><span>⌖</span> Locais</a><a href="#"><span>◐</span> Estatísticas</a></nav>
+      <div class="sidebar-bottom"><a href="#"><span>⚙</span> Definições</a><a href="#"><span>?</span> Ajuda</a><div class="version">PescaLog · v1.0</div></div>
+    </aside>
+    <section class="app-main">
+      <header class="topbar"><button class="menu-toggle">☰</button><div class="topbar-crumb"><span>Jornadas</span><b>/</b><strong>Sesimbra · 18 jul 2026</strong></div><div class="topbar-actions"><div class="avatar">NG</div><div class="user-name"><strong>Nuno Gonçalves</strong><span>Pescador</span></div><button>⌄</button></div></header>
+      <div class="app-content detail-page">
+        <button class="back-link" data-go="history">← Voltar ao Histórico</button>
+        <section class="detail-hero">
+          <div class="detail-date"><strong>18</strong><span>JUL</span><small>2026</small></div>
+          <div class="detail-title"><p class="eyebrow"><span class="eyebrow-dot"></span> Jornada de pesca</p><h1>Sesimbra</h1><div><span>⌖ Sesimbra</span><span>≋ Choco e lula</span></div></div>
+          <div class="detail-actions"><button class="button button-quiet">•••</button><button class="button button-primary">✎ Editar Jornada</button></div>
+          <div class="detail-moon"><div><small>FASE DA LUA</small><strong>Quarto crescente</strong></div></div>
+        </section>
+        <section class="detail-metrics"><article><small>PESO TOTAL</small><strong>12,4 <em>kg</em></strong><span>Jornada completa</span></article><article><small>CAPTURAS</small><strong>8</strong><span>3 espécies</span></article><article><small>MAIS CAPTURADA</small><strong>Choco</strong><span>5 exemplares</span></article></section>
+        <div class="detail-layout">
+          <main>
+            <section class="detail-section"><div class="detail-section-head"><div><small>REGISTOS</small><h2>Capturas da Jornada</h2></div><span>3 espécies · 8 exemplares</span></div>
+              <article class="catch-detail"><div class="catch-symbol coral">C</div><div class="catch-name"><strong>Choco</strong><span>5 exemplares</span></div><div><small>PESO</small><strong>6,2 kg</strong></div><div><small>MEDIDA</small><strong>—</strong></div><p>Dois exemplares maiores capturados perto do final da manhã.</p></article>
+              <article class="catch-detail"><div class="catch-symbol teal">L</div><div class="catch-name"><strong>Lula</strong><span>2 exemplares</span></div><div><small>PESO</small><strong>2,1 kg</strong></div><div><small>MEDIDA</small><strong>34 cm</strong></div><p>Registo de exemplar específico.</p></article>
+              <article class="catch-detail"><div class="catch-symbol gold">P</div><div class="catch-name"><strong>Polvo</strong><span>1 exemplar</span></div><div><small>PESO</small><strong>4,1 kg</strong></div><div><small>MEDIDA</small><strong>—</strong></div><p>Sem observações.</p></article>
+            </section>
+          </main>
+          <aside class="detail-aside">
+            <section class="panel observation-card"><small>OBSERVAÇÕES GERAIS</small><h3>Notas sobre o dia</h3><p>Mar calmo durante a manhã, corrente moderada depois das 11h. A atividade aumentou perto da mudança de maré.</p></section>
+            <section class="panel journey-facts"><small>DETALHES</small><dl><div><dt>Data</dt><dd>18 de julho de 2026</dd></div><div><dt>Local</dt><dd>Sesimbra</dd></div><div><dt>Tipo de pesca</dt><dd>Choco e lula</dd></div><div><dt>Fase da Lua</dt><dd>Quarto crescente</dd></div></dl></section>
+            <button class="danger-link">Eliminar Jornada</button>
+          </aside>
+        </div>
+      </div>
+      <footer class="app-footer"><span>© 2026 PescaLog</span><nav><a href="#">Privacidade</a><a href="#">Ajuda</a></nav><span class="status"><i></i> Jornada guardada</span></footer>
+    </section>
+  </main>
+
+  <main id="admin" class="prototype-view app-frame admin-frame">
+    <aside class="sidebar admin-sidebar">
+      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <div class="admin-badge">ADMINISTRAÇÃO</div>
+      <nav class="side-nav"><small>VISÃO GERAL</small><a class="is-active" href="#"><span>⌂</span> Dashboard</a><small>GESTÃO</small><a href="#"><span>◇</span> Tenants <b>8</b></a><a href="#"><span>♙</span> Utilizadores <b>36</b></a><a href="#"><span>✉</span> Convites <b class="warn">3</b></a><small>CATÁLOGOS</small><a href="#"><span>≡</span> Tipos de pesca</a><a href="#"><span>◉</span> Espécies</a></nav>
+      <div class="sidebar-bottom"><a href="#"><span>⚙</span> Configuração</a><a href="#"><span>↗</span> Sair da administração</a><div class="version">PescaLog Admin · v1.0</div></div>
+    </aside>
+    <section class="app-main">
+      <header class="topbar admin-topbar"><button class="menu-toggle">☰</button><div class="topbar-crumb"><span>Administração</span><b>/</b><strong>Dashboard</strong></div><div class="topbar-actions"><button>♢<i></i></button><div class="avatar admin-avatar">NG</div><div class="user-name"><strong>Nuno Gonçalves</strong><span>Platform Admin</span></div><button>⌄</button></div></header>
+      <div class="app-content admin-content">
+        <div class="page-heading"><div><p class="eyebrow admin-eyebrow"><span></span> Controlo da plataforma</p><h1>Dashboard administrativo</h1><p>Estado dos acessos, tenants e catálogos do PescaLog.</p></div><button class="button button-admin">＋ Convidar utilizador</button></div>
+        <section class="admin-metrics"><article><span class="admin-metric-icon">◇</span><div><small>TENANTS ATIVOS</small><strong>8</strong><p>Todos operacionais</p></div><i class="ok-dot"></i></article><article><span class="admin-metric-icon">♙</span><div><small>UTILIZADORES</small><strong>36</strong><p>32 ativos · 4 inativos</p></div></article><article><span class="admin-metric-icon warning-icon">✉</span><div><small>CONVITES PENDENTES</small><strong>3</strong><p>1 expira nas próximas 24h</p></div></article><article><span class="admin-metric-icon">◉</span><div><small>ESPÉCIES ATIVAS</small><strong>48</strong><p>6 tipos de pesca</p></div></article></section>
+        <section class="admin-grid">
+          <article class="panel admin-table-panel"><div class="panel-head"><div><small>ACESSOS</small><h2>Utilizadores recentes</h2></div><button>Gerir utilizadores →</button></div><div class="filter-row"><div class="search"><span>⌕</span><input placeholder="Pesquisar por nome ou email"></div><select><option>Todos os estados</option></select><button class="filter-button">⚙ Filtros</button></div><div class="table-wrap"><table><thead><tr><th>UTILIZADOR</th><th>TENANT</th><th>ESTADO</th><th>ÚLTIMO ACESSO</th><th></th></tr></thead><tbody><tr><td><span class="table-avatar">MS</span><div><strong>Manuel Silva</strong><small>manuel@exemplo.pt</small></div></td><td>Maré Alta</td><td><span class="badge success">Ativo</span></td><td>Hoje, 09:42</td><td>•••</td></tr><tr><td><span class="table-avatar coral">AC</span><div><strong>Ana Costa</strong><small>ana@exemplo.pt</small></div></td><td>Pesca Sul</td><td><span class="badge invited">Convidado</span></td><td>—</td><td>•••</td></tr><tr><td><span class="table-avatar sand">JR</span><div><strong>João Reis</strong><small>joao@exemplo.pt</small></div></td><td>Maré Alta</td><td><span class="badge success">Ativo</span></td><td>Ontem, 18:21</td><td>•••</td></tr></tbody></table></div></article>
+          <aside class="admin-side"><article class="panel attention-panel"><div class="panel-head"><div><small>AÇÃO NECESSÁRIA</small><h2>Atenção</h2></div></div><a href="#"><span class="attention-icon">!</span><div><strong>1 convite a expirar</strong><p>Revê ou reenvia o convite.</p></div><i>→</i></a><a href="#"><span class="attention-icon muted">○</span><div><strong>2 utilizadores inativos</strong><p>Sem acesso há mais de 90 dias.</p></div><i>→</i></a></article><article class="panel quick-panel"><small>ATALHOS</small><h2>Ações rápidas</h2><button><span>＋</span> Novo tenant</button><button><span>✉</span> Enviar convite</button><button><span>◉</span> Adicionar espécie</button></article></aside>
+        </section>
+      </div>
+      <footer class="app-footer"><span>© 2026 PescaLog · Administração</span><nav><a href="#">Auditoria</a><a href="#">Suporte</a></nav><span class="status"><i></i> Plataforma operacional</span></footer>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
