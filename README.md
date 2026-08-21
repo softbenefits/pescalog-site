@@ -4,7 +4,7 @@ Montra publica do PescaLog para partilha de mockups, prototipos visuais e docume
 
 Este repositório não contém o produto real. A aplicação real PescaLog será desenvolvida separadamente como .NET 10 Blazor, Identity e PostgreSQL.
 
-Snapshot visual: hero Arrábida v8, branding oficial do anzol e estados navegáveis do protótipo.
+Snapshot visual: hero Arrábida v9, branding oficial do anzol e estados navegáveis do protótipo.
 
 ## Conteudo
 
