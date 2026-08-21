@@ -13,6 +13,58 @@ function showView(id) {
 viewButtons.forEach(button => button.addEventListener('click', () => showView(button.dataset.view)));
 document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => showView(button.dataset.go)));
 
+document.querySelectorAll('.sidebar-context').forEach(context => {
+  const lastAccess = document.createElement('small');
+  lastAccess.className = 'last-access';
+  lastAccess.textContent = 'Último acesso: hoje, 09:42';
+  context.appendChild(lastAccess);
+});
+
+document.querySelectorAll('.sidebar-bottom').forEach(bottom => {
+  const logout = document.createElement('a');
+  logout.className = 'logout-link';
+  logout.href = '#';
+  logout.innerHTML = '<span>↪</span> Sair da sessão';
+  bottom.insertBefore(logout, bottom.querySelector('.version'));
+});
+
+document.querySelectorAll('.topbar-actions').forEach(actions => {
+  const accountToggle = actions.querySelector('button:last-child');
+  if (!accountToggle) return;
+  accountToggle.classList.add('account-toggle');
+  accountToggle.setAttribute('aria-label', 'Abrir menu da conta');
+  accountToggle.setAttribute('aria-expanded', 'false');
+  accountToggle.setAttribute('aria-haspopup', 'menu');
+  const accountMenu = document.createElement('div');
+  accountMenu.className = 'account-menu';
+  accountMenu.setAttribute('role', 'menu');
+  accountMenu.innerHTML = '<div class="account-menu-head"><strong>Nuno Gonçalves</strong><span>Último acesso hoje, 09:42</span></div><a href="#" role="menuitem"><span>◉</span> Perfil</a><a href="#" role="menuitem"><span>⚙</span> Definições da conta</a><a href="#" role="menuitem"><span>✦</span> Preferências</a><div class="account-menu-divider"></div><a class="account-logout" href="#" role="menuitem"><span>↪</span> Terminar sessão</a>';
+  actions.appendChild(accountMenu);
+  accountToggle.addEventListener('click', event => {
+    event.stopPropagation();
+    const open = actions.classList.toggle('account-open');
+    accountToggle.setAttribute('aria-expanded', String(open));
+  });
+});
+
+document.addEventListener('click', event => {
+  document.querySelectorAll('.topbar-actions.account-open').forEach(actions => {
+    if (!actions.contains(event.target)) {
+      actions.classList.remove('account-open');
+      actions.querySelector('.account-toggle')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    document.querySelectorAll('.topbar-actions.account-open').forEach(actions => {
+      actions.classList.remove('account-open');
+      actions.querySelector('.account-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
 document.querySelectorAll('.menu-toggle').forEach(button => {
   const frame = button.closest('.app-frame');
   button.setAttribute('aria-expanded', 'true');
