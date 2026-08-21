@@ -14,7 +14,21 @@ viewButtons.forEach(button => button.addEventListener('click', () => showView(bu
 document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => showView(button.dataset.go)));
 
 document.querySelectorAll('.menu-toggle').forEach(button => {
-  button.addEventListener('click', () => button.closest('.app-frame').classList.toggle('menu-open'));
+  const frame = button.closest('.app-frame');
+  button.setAttribute('aria-expanded', 'true');
+  button.setAttribute('aria-label', 'Minimizar menu');
+  button.addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 760px)').matches) {
+      const open = frame.classList.toggle('menu-open');
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      return;
+    }
+    const collapsed = frame.classList.toggle('menu-collapsed');
+    frame.classList.toggle('menu-open', !collapsed);
+    button.setAttribute('aria-expanded', String(!collapsed));
+    button.setAttribute('aria-label', collapsed ? 'Expandir menu' : 'Minimizar menu');
+  });
 });
 
 const initialView = new URLSearchParams(window.location.search).get('view');

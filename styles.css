@@ -181,8 +181,9 @@ h1, h2, h3, strong { font-family: var(--display); }
 .auth-state-switcher { position:fixed; z-index:1001; right:18px; bottom:18px; display:flex; gap:4px; align-items:center; padding:5px; color:#d5e2e1; background:rgba(7,31,43,.94); border:1px solid rgba(255,255,255,.14); border-radius:999px; box-shadow:0 13px 40px rgba(0,0,0,.22); }.auth-state-switcher span { padding:0 7px; color:#89a4a6; font-size:8px; font-weight:800; text-transform:uppercase; }.auth-state-switcher button { padding:8px 10px; color:#dce7e5; background:transparent; border:0; border-radius:999px; font-size:9px; font-weight:700; }.auth-state-switcher button.is-active { color:var(--navy-950); background:var(--gold-soft); }
 @keyframes access-in { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
 
-.app-frame { min-height: 100vh; grid-template-columns: 236px minmax(0,1fr); background: var(--page); }
+.app-frame { min-height: 100vh; grid-template-columns: 236px minmax(0,1fr); background: var(--page); transition: grid-template-columns .18s ease; }
 .app-frame.is-active { display: grid; }
+.app-frame.menu-collapsed { grid-template-columns: 72px minmax(0,1fr); }
 .sidebar { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; padding: 25px 18px 17px; color: #d4e3e2; background: var(--navy-950); }
 .sidebar > .brand { margin: 0 10px 30px; }
 .sidebar-context { display: grid; gap: 4px; margin: 0 4px 22px; padding: 15px; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.07); border-radius: var(--radius-sm); }
@@ -200,7 +201,13 @@ h1, h2, h3, strong { font-family: var(--display); }
 .version { padding: 15px 12px 0; color: #54777d; font-size: 9px; }
 .app-main { min-width: 0; display: flex; flex-direction: column; }
 .topbar { height: 64px; display: flex; align-items: center; padding: 0 26px; background: rgba(255,255,255,.9); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
-.menu-toggle { display: none; margin-right: 10px; background: transparent; border: 0; }
+.menu-toggle { width: 34px; height: 34px; display: inline-grid; place-items: center; margin-right: 10px; color: var(--navy-900); background: transparent; border: 1px solid transparent; border-radius: 7px; font-size: 18px; line-height: 1; }
+.menu-toggle:hover, .menu-toggle:focus-visible { background: #eef3f1; border-color: var(--border); outline: none; }
+.menu-collapsed .sidebar { padding-inline: 10px; }
+.menu-collapsed .sidebar > .brand { width: 44px; margin-inline: auto; background-image: url('assets/brand/pescalog-symbol-dark.svg'); }
+.menu-collapsed .sidebar-context, .menu-collapsed .side-nav > small, .menu-collapsed .side-nav a b, .menu-collapsed .sidebar-bottom .version { display: none; }
+.menu-collapsed .side-nav a, .menu-collapsed .sidebar-bottom a { justify-content: center; padding-inline: 0; font-size: 0; }
+.menu-collapsed .side-nav a > span, .menu-collapsed .sidebar-bottom a > span { width: auto; font-size: 17px; }
 .topbar-crumb { display: flex; gap: 9px; align-items: center; font-size: 11px; }
 .topbar-crumb span { color: #87999b; }
 .topbar-crumb b { color: #c1cecc; }
