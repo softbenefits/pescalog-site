@@ -218,14 +218,14 @@ h1, h2, h3, strong { font-family: var(--display); }
 .topbar-actions button { position: relative; background: transparent; border: 0; }
 .topbar-actions button i { position: absolute; top: 1px; right: 1px; width: 5px; height: 5px; background: var(--coral); border-radius: 50%; }
 .topbar-actions { position: relative; }
-.account-toggle { min-width: 28px; height: 34px; padding: 0 6px; border-radius: 6px; }
-.account-toggle:hover, .account-toggle:focus-visible { background: #eef3f1; outline: none; }
+.account-toggle { min-width: 34px; height: 34px; padding: 0 8px; color: var(--navy-900); background: #f4f8f6 !important; border: 1px solid #cbd8d5 !important; border-radius: 7px; font-size: 15px; }
+.account-toggle:hover, .account-toggle:focus-visible, .account-open .account-toggle { color: #fff; background: var(--sea-700) !important; border-color: var(--sea-700) !important; outline: none; }
 .account-menu { position: absolute; z-index: 80; top: calc(100% + 10px); right: 0; width: 238px; display: none; padding: 8px; color: var(--navy-900); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 18px 45px rgba(7,31,43,.16); }
 .account-open .account-menu { display: grid; }
 .account-menu-head { display: grid; gap: 3px; padding: 9px 10px 11px; border-bottom: 1px solid var(--border); }
-.account-menu-head strong { font-size: 11px; }
-.account-menu-head span { color: #7b9092; font-size: 9px; }
-.account-menu a { min-height: 36px; display: flex; gap: 10px; align-items: center; padding: 0 10px; color: #476467; border-radius: 7px; font-size: 10px; font-weight: 700; }
+.account-menu-head strong { font-size: 12px; }
+.account-menu-head span { color: #7b9092; font-size: 10px; }
+.account-menu a { min-height: 40px; display: flex; gap: 10px; align-items: center; padding: 0 10px; color: #476467; border-radius: 7px; font-size: 12px; font-weight: 700; }
 .account-menu a:hover { background: #eef5f2; }
 .account-menu a > span { width: 16px; color: var(--sea-700); text-align: center; }
 .account-menu .account-menu-divider { height: 1px; margin: 5px 2px; background: var(--border); }
