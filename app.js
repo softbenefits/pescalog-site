@@ -38,7 +38,7 @@ document.querySelectorAll('.topbar-actions').forEach(actions => {
   const accountMenu = document.createElement('div');
   accountMenu.className = 'account-menu';
   accountMenu.setAttribute('role', 'menu');
-  accountMenu.innerHTML = '<div class="account-menu-head"><strong>Nuno Gonçalves</strong><span>Último acesso hoje, 09:42</span></div><a href="#" role="menuitem"><span>◉</span> Perfil</a><a href="#" role="menuitem"><span>⚙</span> Definições da conta</a><a href="#" role="menuitem"><span>✦</span> Preferências</a><div class="account-menu-divider"></div><a class="account-logout" href="#" role="menuitem"><span>↪</span> Terminar sessão</a>';
+  accountMenu.innerHTML = '<div class="account-menu-head"><strong>Nuno Gonçalves</strong><span>Último acesso hoje, 09:42</span></div><a href="#" role="menuitem"><span>⚙</span> Perfil e definições</a><div class="account-menu-divider"></div><a class="account-logout" href="#" role="menuitem"><span>↪</span> Terminar sessão</a>';
   actions.appendChild(accountMenu);
   accountToggle.addEventListener('click', event => {
     event.stopPropagation();
