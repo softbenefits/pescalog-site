@@ -41,22 +41,22 @@ h1, h2, h3, strong { font-family: var(--display); }
 
 .prototype-switcher { position: fixed; z-index: 1000; left: 50%; bottom: max(18px, env(safe-area-inset-bottom)); max-width: calc(100% - 24px); display: flex; gap: 4px; align-items: center; padding: 5px; color: #fff; background: rgba(7,31,43,.92); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; box-shadow: 0 14px 40px rgba(0,0,0,.25); backdrop-filter: blur(14px); transform: translateX(-50%); }
 .prototype-switcher > span { padding: 0 10px; color: #a8c4c5; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.prototype-version { margin-left: 6px; padding: 2px 6px; color: var(--navy-950); background: var(--gold-soft); border-radius: 999px; font-size: 10px; letter-spacing: 0; text-transform: lowercase; }
 .prototype-switcher button { padding: 9px 14px; color: #d7e4e3; background: transparent; border: 0; border-radius: 999px; font-size: 12px; font-weight: 700; }
 .prototype-switcher button.is-active { color: var(--navy-950); background: var(--gold-soft); }
 .prototype-view { display: none; }
 .prototype-view.is-active { display: block; }
 .content-width { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 
-.brand { --brand-text: #fff; --brand-mark-surface: #fffdf9; display: inline-flex; align-items: center; gap: 11px; color: var(--brand-text); font-family: var(--display); font-size: 23px; font-weight: 600; letter-spacing: -.04em; }
-.brand strong { color: var(--gold); font-weight: 800; }
-.brand-dark { --brand-text: var(--navy-950); --brand-mark-surface: transparent; }
-.brand-mark { position: relative; width: 46px; height: 46px; flex: 0 0 46px; display: inline-block; background: var(--brand-mark-surface) url('assets/pescalog-emblema-livro-ondas.svg') center/44px 44px no-repeat; border-radius: 50%; }
-.brand-mark::before,.brand-mark::after,.brand-mark i { display: none; }
-.app-sidebar .brand-mark,.public-footer .brand-mark { box-shadow: 0 3px 10px rgba(0,0,0,.12); }
-[data-theme='dark'] .brand-dark,.theme-dark .brand-dark { --brand-text: #f7fbfa; --brand-mark-surface: #fffdf9; }
-.brand-compact > span:last-child { display: none; }
-.brand-compact .brand-mark { width: 42px; height: 42px; flex-basis: 42px; background-size: 40px 40px; }
+.brand { --brand-logo: url('assets/brand/pescalog-horizontal-dark.svg'); width: 190px; height: 52px; flex: 0 0 auto; display: inline-block; background: var(--brand-logo) left center / contain no-repeat; }
+.brand-dark { --brand-logo: url('assets/brand/pescalog-horizontal-light.svg'); }
+.brand > span { display: none; }
+.public-header .brand,.auth-page-header .brand { width: 230px; height: 58px; }
+.public-footer .brand { width: 210px; height: 54px; }
+.app-sidebar .brand { width: 188px; height: 50px; }
+.brand-compact { --brand-logo: url('assets/brand/pescalog-symbol-dark.svg'); width: 44px; height: 44px; }
+.brand-dark.brand-compact { --brand-logo: url('assets/brand/pescalog-symbol-light.svg'); }
+[data-theme='dark'] .brand-dark,.theme-dark .brand-dark { --brand-logo: url('assets/brand/pescalog-horizontal-dark.svg'); }
+[data-theme='dark'] .brand-dark.brand-compact,.theme-dark .brand-dark.brand-compact { --brand-logo: url('assets/brand/pescalog-symbol-dark.svg'); }
 
 .public-header { height: 82px; display: flex; justify-content: space-between; align-items: center; }
 .public-header nav { display: flex; align-items: center; gap: 32px; color: #456068; font-size: 14px; font-weight: 600; }
@@ -155,7 +155,7 @@ h1, h2, h3, strong { font-family: var(--display); }
 .auth-page-header { height:78px; display:flex; justify-content:space-between; align-items:center; }
 .text-back { padding:0; color:#597378; background:transparent; border:0; font-size:11px; font-weight:700; }
 .auth-page-shell { min-height:calc(100vh - 78px); display:grid; grid-template-columns:.93fr 1.07fr; overflow:hidden; background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg) var(--radius-lg) 0 0; box-shadow:0 20px 60px rgba(7,31,43,.08); }
-.auth-story { position:relative; min-height:680px; padding:72px 64px; overflow:hidden; color:#fff; background:linear-gradient(90deg,rgba(5,28,37,.93),rgba(7,50,58,.69)),url('assets/hero-pescador.png') center 76%/cover; }
+.auth-story { position:relative; min-height:680px; padding:72px 64px; overflow:hidden; color:#fff; background:linear-gradient(90deg,rgba(5,28,37,.93),rgba(7,50,58,.69)),url('assets/hero-pescalog-arrabida.png') center 76%/cover; }
 .auth-story::after { content:''; position:absolute; left:-5%; right:-5%; bottom:105px; height:76px; border-top:2px solid rgba(124,212,199,.46); border-radius:50%; transform:rotate(-3deg); }
 .auth-story h1 { position:relative; z-index:2; margin:0 0 19px; font-size:clamp(38px,4vw,57px); line-height:1.04; letter-spacing:-.055em; }
 .auth-story h1 em { color:var(--gold-soft); font-style:normal; }
@@ -481,10 +481,14 @@ td:first-child small { color: #89999b; font-size: 8px; }
 }
 
 @media (max-width: 760px) {
-  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
-  .public-header .brand > span:last-child,.auth-page-header .brand > span:last-child,.app-sidebar .brand > span:last-child { display:none; }
-  .public-header .brand-mark,.auth-page-header .brand-mark,.app-sidebar .brand-mark { width:42px; height:42px; flex-basis:42px; background-size:40px 40px; }
-  .prototype-switcher { width: calc(100% - 20px); bottom: max(10px, env(safe-area-inset-bottom)); justify-content:flex-start; overflow-x:auto; overscroll-behavior-x: contain; scrollbar-width: none; }
+  body { padding-bottom: 0; }
+  .brand { --brand-logo:url('assets/brand/pescalog-symbol-dark.svg'); width:44px; height:44px; }
+  .brand-dark { --brand-logo:url('assets/brand/pescalog-symbol-light.svg'); }
+  .public-header .brand-dark,.auth-page-header .brand-dark { --brand-logo:url('assets/brand/pescalog-horizontal-light.svg'); width:166px; height:44px; }
+  .public-footer .brand,.app-sidebar .brand { --brand-logo:url('assets/brand/pescalog-horizontal-dark.svg'); width:180px; height:48px; }
+  [data-theme='dark'] .brand-dark,.theme-dark .brand-dark { --brand-logo:url('assets/brand/pescalog-symbol-dark.svg'); }
+  [data-theme='dark'] .public-header .brand-dark,[data-theme='dark'] .auth-page-header .brand-dark,.theme-dark .public-header .brand-dark,.theme-dark .auth-page-header .brand-dark { --brand-logo:url('assets/brand/pescalog-horizontal-dark.svg'); }
+  .prototype-switcher { position: relative; left: auto; bottom: auto; width: calc(100% - 20px); margin: 10px auto 0; justify-content:flex-start; overflow-x:auto; overscroll-behavior-x: contain; scrollbar-width: none; transform: none; }
   .prototype-switcher::-webkit-scrollbar { display: none; }
   .prototype-switcher > span { display: none; }
   .prototype-switcher button { flex: 0 0 auto; padding-inline: 11px; font-size: 10px; white-space: nowrap; }

@@ -1,8 +1,10 @@
-# PescaLog Site
+# PescaLog Site — montra pública
 
 Montra publica do PescaLog para partilha de mockups, prototipos visuais e documentacao funcional.
 
-Este repositorio nao contem o produto real. A aplicacao real PescaLog sera desenvolvida separadamente como .NET 10 Blazor, Identity e PostgreSQL.
+Este repositório não contém o produto real. A aplicação real PescaLog será desenvolvida separadamente como .NET 10 Blazor, Identity e PostgreSQL.
+
+Snapshot visual: hero Arrábida v8, branding oficial do anzol e estados navegáveis do protótipo.
 
 ## Conteudo
 
@@ -11,6 +13,6 @@ Este repositorio nao contem o produto real. A aplicacao real PescaLog sera desen
 - `app.js`: interacoes do prototipo.
 - `assets/`: imagens e marca visual.
 
-## Publicacao
+## Publicação
 
-Este repositorio esta preparado para GitHub Pages.
+Este repositório está preparado para GitHub Pages. A montra é pública e autónoma; não inclui código, configuração, dados ou credenciais da aplicação real.

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo PescaLog para fundo escuro</title>
+  <desc id="desc">Anzol forte sobre uma onda, delimitado por um círculo claro.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="57" fill="none" stroke="#FFFDF9" stroke-width="7"/>
+    <path d="M78 18c18 1 21 24 15 39-3 8-7 14-12 19" fill="none" stroke="#E6C56E" stroke-width="4"/>
+    <path d="M68 34v32c0 12-5 20-14 23-10 3-19-3-21-13-1-7 2-14 8-20l-2 12 9-17-18 8c-10 8-15 19-12 31 4 18 21 29 39 24 17-5 29-22 29-45V34Z" fill="#FFFDF9"/>
+    <circle cx="77" cy="27" r="10" fill="none" stroke="#FFFDF9" stroke-width="7"/>
+    <path d="m69 37 14-3M69 43l15-3M70 49l14-3" fill="none" stroke="#E6C56E" stroke-width="5"/>
+    <path d="M14 91c16-14 29-6 39 1 12 8 20 9 30 1 9-7 18-11 31-4-7 1-12 5-18 10-13 11-29 17-47 12-14-4-25-12-35-20Z" fill="#38A6A0" stroke="#38A6A0" stroke-width="2"/>
+    <path d="M18 100c15-8 26-4 37 2 12 7 25 6 37-1 7-4 13-6 21-5" stroke="#65BDB7" stroke-width="6"/>
+  </g>
+</svg>

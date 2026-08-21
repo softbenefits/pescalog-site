@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PescaLog — Protótipo visual</title>
-  <link rel="stylesheet" href="styles.css?v=20260720-v2">
+  <link rel="icon" href="assets/brand/pescalog-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260720-responsive">
 </head>
 <body>
   <div class="prototype-switcher" aria-label="Navegação do protótipo">
-    <span>Protótipo <b class="prototype-version">v2</b></span>
+    <span>Protótipo</span>
     <button class="is-active" data-view="public">Página pública</button>
     <button data-view="auth">Acesso</button>
     <button data-view="dashboard">Dashboard</button>
@@ -46,8 +47,8 @@
         </div>
       </div>
 
-      <div class="hero-visual hero-fishing" aria-label="Pescador numa embarcação no mar, ao amanhecer">
-        <img class="hero-fishing-image" src="assets/hero-pescador.png" alt="Pescador numa pequena embarcação junto à costa, com cana de pesca">
+      <div class="hero-visual hero-fishing" aria-label="Grupo misto numa embarcação de pesca recreativa, com a costa da Arrábida ao fundo">
+        <img class="hero-fishing-image" src="assets/hero-pescalog-arrabida.png" alt="Cinco pescadores num barco branco, com o mestre na cabine e a costa da Arrábida ao fundo">
         <div class="hero-fishing-caption"><span>O mar ensina a esperar.</span><small>O PescaLog ajuda-te a recordar.</small></div>
       </div>
     </section>
@@ -88,13 +89,13 @@
     </section>
 
     <footer class="public-footer">
-      <div class="content-width"><a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a><p>A tua pesca. A tua história.</p><span>© 2026 PescaLog</span></div>
+      <div class="content-width"><a class="brand" href="#" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a><p>A tua pesca. A tua história.</p><span>© 2026 PescaLog</span></div>
     </footer>
   </main>
 
   <main id="auth" class="prototype-view auth-page">
     <header class="auth-page-header content-width">
-      <a class="brand brand-dark" href="#" data-go="public"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <a class="brand brand-dark" href="#" data-go="public" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
       <button class="text-back" data-go="public">← Voltar ao PescaLog</button>
     </header>
     <section class="auth-page-shell content-width">
@@ -162,7 +163,7 @@
 
   <main id="dashboard" class="prototype-view app-frame">
     <aside class="sidebar">
-      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <a class="brand" href="#" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
       <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
       <nav class="side-nav">
         <a class="is-active" href="#"><span>⌂</span> Dashboard</a>
@@ -203,7 +204,7 @@
 
   <main id="journey" class="prototype-view app-frame">
     <aside class="sidebar">
-      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <a class="brand" href="#" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
       <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
       <nav class="side-nav">
         <a href="#" data-go="dashboard"><span>⌂</span> Dashboard</a>
@@ -286,7 +287,7 @@
 
   <main id="history" class="prototype-view app-frame">
     <aside class="sidebar">
-      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <a class="brand" href="#" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
       <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
       <nav class="side-nav"><a href="#" data-go="dashboard"><span>⌂</span> Dashboard</a><a class="is-active" href="#"><span>◌</span> Jornadas <b>24</b></a><a href="#"><span>⌖</span> Locais</a><a href="#"><span>◐</span> Estatísticas</a></nav>
       <div class="sidebar-bottom"><a href="#"><span>⚙</span> Definições</a><a href="#"><span>?</span> Ajuda</a><div class="version">PescaLog · v1.0</div></div>
@@ -320,7 +321,7 @@
 
   <main id="detail" class="prototype-view app-frame">
     <aside class="sidebar">
-      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <a class="brand" href="#" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
       <div class="sidebar-context"><small>ESPAÇO PESSOAL</small><strong>Olá, Nuno</strong><span>As tuas jornadas</span></div>
       <nav class="side-nav"><a href="#" data-go="dashboard"><span>⌂</span> Dashboard</a><a class="is-active" href="#" data-go="history"><span>◌</span> Jornadas <b>24</b></a><a href="#"><span>⌖</span> Locais</a><a href="#"><span>◐</span> Estatísticas</a></nav>
       <div class="sidebar-bottom"><a href="#"><span>⚙</span> Definições</a><a href="#"><span>?</span> Ajuda</a><div class="version">PescaLog · v1.0</div></div>
@@ -357,7 +358,7 @@
 
   <main id="admin" class="prototype-view app-frame admin-frame">
     <aside class="sidebar admin-sidebar">
-      <a class="brand" href="#"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
+      <a class="brand" href="#" aria-label="PescaLog"><span class="brand-mark"><i></i></span><span>pesca<strong>Log</strong></span></a>
       <div class="admin-badge">ADMINISTRAÇÃO</div>
       <nav class="side-nav"><small>VISÃO GERAL</small><a class="is-active" href="#"><span>⌂</span> Dashboard</a><small>GESTÃO</small><a href="#"><span>◇</span> Tenants <b>8</b></a><a href="#"><span>♙</span> Utilizadores <b>36</b></a><a href="#"><span>✉</span> Convites <b class="warn">3</b></a><small>CATÁLOGOS</small><a href="#"><span>≡</span> Tipos de pesca</a><a href="#"><span>◉</span> Espécies</a></nav>
       <div class="sidebar-bottom"><a href="#"><span>⚙</span> Configuração</a><a href="#"><span>↗</span> Sair da administração</a><div class="version">PescaLog Admin · v1.0</div></div>

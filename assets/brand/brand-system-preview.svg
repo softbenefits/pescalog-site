@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Sistema responsivo da marca PescaLog</title>
+  <desc id="desc">Aplicações Light e Dark do símbolo e assinatura horizontal em desktop, sidebar e mobile.</desc>
+  <rect width="1440" height="1080" fill="#F3F6F4"/>
+  <text x="72" y="76" fill="#071F2B" font-family="Manrope, Segoe UI, sans-serif" font-size="34" font-weight="750">PescaLog — sistema de marca responsivo</text>
+  <text x="72" y="112" fill="#687B80" font-family="DM Sans, Segoe UI, sans-serif" font-size="17">Anzol dominante · mar presente · círculo delimitador · leitura consistente entre 32 e 64 px</text>
+
+  <rect x="72" y="155" width="630" height="245" rx="24" fill="#FFFDF9" stroke="#DBE4E1"/>
+  <text x="104" y="198" fill="#687B80" font-family="DM Sans, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">DESKTOP · LIGHT</text>
+  <image href="pescalog-horizontal-light.svg" x="104" y="232" width="430" height="115"/>
+  <text x="104" y="374" fill="#687B80" font-family="DM Sans, Segoe UI, sans-serif" font-size="14">Header público · altura recomendada: 56–64 px</text>
+
+  <rect x="738" y="155" width="630" height="245" rx="24" fill="#071F2B"/>
+  <text x="770" y="198" fill="#9AB1B2" font-family="DM Sans, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">DESKTOP · DARK</text>
+  <image href="pescalog-horizontal-dark.svg" x="770" y="232" width="430" height="115"/>
+  <text x="770" y="374" fill="#9AB1B2" font-family="DM Sans, Segoe UI, sans-serif" font-size="14">Sidebar aberta · altura recomendada: 48–56 px</text>
+
+  <rect x="72" y="436" width="390" height="415" rx="24" fill="#071F2B"/>
+  <text x="104" y="480" fill="#9AB1B2" font-family="DM Sans, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SIDEBAR ABERTA</text>
+  <image href="pescalog-horizontal-dark.svg" x="104" y="514" width="270" height="72"/>
+  <rect x="104" y="624" width="326" height="58" rx="12" fill="#146B6B"/>
+  <circle cx="132" cy="653" r="8" fill="#F4E6BD"/>
+  <text x="154" y="660" fill="#FFFDF9" font-family="DM Sans, Segoe UI, sans-serif" font-size="18" font-weight="650">Dashboard</text>
+  <text x="104" y="806" fill="#9AB1B2" font-family="DM Sans, Segoe UI, sans-serif" font-size="14">Assinatura completa · 190–220 px</text>
+
+  <rect x="498" y="436" width="205" height="415" rx="24" fill="#071F2B"/>
+  <text x="530" y="480" fill="#9AB1B2" font-family="DM Sans, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">RECOLHIDA</text>
+  <image href="pescalog-symbol-dark.svg" x="558" y="523" width="86" height="86"/>
+  <rect x="555" y="650" width="92" height="58" rx="14" fill="#146B6B"/>
+  <circle cx="601" cy="679" r="8" fill="#F4E6BD"/>
+  <text x="530" y="806" fill="#9AB1B2" font-family="DM Sans, Segoe UI, sans-serif" font-size="14">Símbolo · 44–48 px</text>
+
+  <rect x="738" y="436" width="630" height="190" rx="24" fill="#FFFDF9" stroke="#DBE4E1"/>
+  <text x="770" y="480" fill="#687B80" font-family="DM Sans, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">MOBILE · PÚBLICO / TOPBAR COMPACTA</text>
+  <rect x="770" y="508" width="260" height="82" rx="15" fill="#FFFDF9" stroke="#DBE4E1"/>
+  <image href="pescalog-horizontal-light.svg" x="786" y="525" width="180" height="42"/>
+  <path d="M976 538h28M976 549h28M976 560h28" stroke="#071F2B" stroke-width="3" stroke-linecap="round"/>
+  <rect x="1066" y="508" width="270" height="82" rx="15" fill="#071F2B"/>
+  <image href="pescalog-symbol-dark.svg" x="1084" y="521" width="56" height="56"/>
+  <path d="M1282 538h28M1282 549h28M1282 560h28" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="738" y="662" width="630" height="189" rx="24" fill="#FFFDF9" stroke="#DBE4E1"/>
+  <text x="770" y="706" fill="#687B80" font-family="DM Sans, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">ESCALA DO SÍMBOLO</text>
+  <image href="pescalog-favicon.svg" x="785" y="746" width="32" height="32"/>
+  <image href="pescalog-symbol-light.svg" x="866" y="738" width="40" height="40"/>
+  <image href="pescalog-symbol-light.svg" x="955" y="734" width="48" height="48"/>
+  <image href="pescalog-symbol-light.svg" x="1055" y="726" width="64" height="64"/>
+  <image href="pescalog-symbol-light.svg" x="1170" y="710" width="96" height="96"/>
+  <g fill="#687B80" font-family="DM Sans, Segoe UI, sans-serif" font-size="12" text-anchor="middle">
+    <text x="801" y="822">32</text><text x="886" y="822">40</text><text x="979" y="822">48</text><text x="1087" y="822">64</text><text x="1218" y="822">96 px</text>
+  </g>
+
+  <rect x="72" y="890" width="1296" height="126" rx="24" fill="#E8EEEB"/>
+  <text x="104" y="934" fill="#071F2B" font-family="Manrope, Segoe UI, sans-serif" font-size="18" font-weight="750">Regra responsiva</text>
+  <text x="104" y="970" fill="#536A70" font-family="DM Sans, Segoe UI, sans-serif" font-size="16">Apresentação mobile: assinatura compacta · controlos compactos/sidebar recolhida: símbolo · favicon: versão simplificada</text>
+  <circle cx="1265" cy="950" r="37" fill="#FFFDF9"/>
+  <image href="pescalog-symbol-light.svg" x="1228" y="913" width="74" height="74"/>
+</svg>
