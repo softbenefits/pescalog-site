@@ -370,6 +370,7 @@ td:first-child small { color: #89999b; font-size: 8px; }
 .auto-dot { width: 5px; height: 5px; display: inline-block; margin-right: 3px; background: var(--success); border-radius: 50%; }
 .unit-input input { padding-right: 40px; }
 .unit-input strong { position: absolute; top: 14px; right: 12px; color: #718789; font-size: 9px; }
+.calculated-field input[readonly] { color: var(--navy-900); background: #eef6f3; border-color: #c5ded8; }
 .captures-heading { justify-content: space-between; gap: 15px; }
 .captures-heading > div { gap: 13px; }
 .captures-heading .button { min-height: 40px; font-size: 10px; }

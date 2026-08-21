@@ -236,7 +236,7 @@
                 <label class="field"><span>Local <b>*</b></span><div class="compound-field"><select><option>Sesimbra</option><option>Fonte da Telha</option><option>Setúbal</option></select><button type="button" class="new-location">＋ Novo</button></div></label>
                 <label class="field"><span>Tipo de pesca <b>*</b></span><select id="fishing-type"><option>Choco e lula</option><option>Diversos</option><option>Polvo</option></select><small>Usado para ordenar as espécies sugeridas.</small></label>
                 <label class="field"><span>Fase da Lua</span><div class="moon-select"><i class="phase-icon"></i><select><option>Quarto crescente</option><option>Lua cheia</option><option>Quarto minguante</option><option>Lua nova</option></select></div><small><i class="auto-dot"></i> Sugerida automaticamente para esta data. <button type="button">Alterar</button></small></label>
-                <label class="field"><span>Peso Total</span><div class="unit-input"><input type="number" step="0.01" placeholder="0,00"><strong>kg</strong></div><small>Peso total de toda a Jornada.</small></label>
+                <label class="field calculated-field"><span>Peso total da Jornada</span><div class="unit-input"><input id="journey-total-weight" type="number" step="0.01" placeholder="—" readonly aria-describedby="journey-total-help"><strong>kg</strong></div><small id="journey-total-help">Calculado pelo peso total de cada captura.</small></label>
                 <label class="field field-wide"><span>Observações Gerais</span><textarea rows="3" placeholder="Estado do mar, corrente, condições ou notas sobre o dia…"></textarea><small>Estas observações referem-se ao dia de pesca.</small></label>
               </div>
             </section>

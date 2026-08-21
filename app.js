@@ -102,20 +102,30 @@ function addCapture(shouldScroll = true) {
     <div class="capture-form-grid">
       <label class="field field-species"><span>Espécie <b>*</b></span><select><option>Choco</option><option>Lula</option><option>Polvo</option><option>Robalo</option><option>Dourada</option><option>Besugo</option></select><small><i class="suggested-dot"></i> Sugerida pelo tipo de pesca.</small></label>
       <label class="field"><span>Quantidade <b>*</b></span><div class="quantity-control"><button type="button">−</button><input type="number" value="1" min="1"><button type="button">＋</button></div></label>
-      <label class="field"><span>Peso</span><div class="unit-input"><input type="number" step="0.01" placeholder="0,00"><strong>kg</strong></div></label>
+      <label class="field"><span>Peso total da captura</span><div class="unit-input"><input class="capture-weight" data-capture-weight type="number" step="0.01" min="0" placeholder="0,00"><strong>kg</strong></div><small>Total desta captura, não peso por unidade.</small></label>
       <label class="field"><span>Medida</span><div class="unit-input"><input type="number" step="0.1" placeholder="0,0"><strong>cm</strong></div></label>
       <label class="field field-wide"><span>Observações da Captura</span><textarea rows="2" placeholder="Nota específica sobre esta espécie ou exemplar…"></textarea></label>
     </div>`;
   captureList.appendChild(capture);
+  capture.querySelector('[data-capture-weight]').addEventListener('input', recalculateJourneyWeight);
   capture.querySelector('.remove-capture').addEventListener('click', () => {
     capture.remove();
     if (!captureList.children.length) captureEmpty.hidden = false;
+    recalculateJourneyWeight();
   });
   capture.querySelectorAll('.quantity-control button').forEach((button, index) => button.addEventListener('click', () => {
     const input = button.parentElement.querySelector('input');
     input.value = Math.max(1, Number(input.value) + (index === 0 ? -1 : 1));
   }));
   if (shouldScroll === true) capture.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function recalculateJourneyWeight() {
+  const totalField = document.querySelector('#journey-total-weight');
+  if (!totalField) return;
+  const total = [...document.querySelectorAll('[data-capture-weight]')]
+    .reduce((sum, input) => sum + (Number(input.value) || 0), 0);
+  totalField.value = total > 0 ? total.toFixed(2) : '';
 }
 
 document.querySelectorAll('.add-capture').forEach(button => button.addEventListener('click', () => addCapture(true)));
